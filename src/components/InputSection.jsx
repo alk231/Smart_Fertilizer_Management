@@ -22,7 +22,7 @@ function InputSection({ backendData }) {
 
   return (
     <div className="main-class">
-      <div className="Input-section bg-[#f3efdd] p-6 rounded-xl shadow-md w-full max-w-md">
+      <div className="Input-section bg-[#f3efdd] p-6 rounded-xl shadow-md w-full  ">
         <h2 className="text-xl font-semibold text-green-900 mb-4">
           Input Section
         </h2>

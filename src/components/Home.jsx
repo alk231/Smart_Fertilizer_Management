@@ -8,7 +8,7 @@ function Home({ backendData }) {
   return (
     <div className="pt-3 min-h-screen overflow-hidden bg-gradient-to-br from-green-50 via-green-100 to-green-200 w-full">
       {/* Page Title */}
-      <h1 className="text-4xl font-bold text-center text-green-900 mb-10 tracking-wide">
+      <h1 className="text-4xl font-bold text-center text-green-900 my-10 tracking-wide">
         🌱 Smart Fertilizer Management
       </h1>
 
@@ -39,7 +39,7 @@ function Home({ backendData }) {
         </div>
 
         {/* Result Section (spans full row) */}
-        <div className="bg-white w-[33%] p-6 mb-5 rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 sm:col-span-2 lg:col-span-3">
+        <div className="bg-white p-6 mb-5 rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 ">
           <ResultSection
             nitrogen={backendData?.nitrogen || 90}
             phosphorus={backendData?.phosphorus || 60}

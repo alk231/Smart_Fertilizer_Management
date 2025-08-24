@@ -3,7 +3,7 @@ import HistoryIcon from "@mui/icons-material/History";
 
 const HistorySection = ({ historyData }) => {
   return (
-    <div className="bg-[#f2efe2] p-6 rounded-xl shadow-md w-full max-w-md">
+    <div className="bg-[#f2efe2] p-6 rounded-xl shadow-md w-full h-full">
       <div className="flex items-center mb-4 text-green-900">
         <HistoryIcon className="mr-2" />
         <h2 className="text-xl font-semibold">History</h2>
