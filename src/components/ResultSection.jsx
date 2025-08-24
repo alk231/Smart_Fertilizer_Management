@@ -3,7 +3,7 @@ import OpacityIcon from "@mui/icons-material/Opacity"; // You can change this to
 
 function ResultSection({ nitrogen, phosphorus, potassium }) {
   return (
-    <div className="bg-[#f2efe2] p-6 rounded-xl shadow-md w-full max-w-md">
+    <div className="bg-[#f2efe2] p-6 rounded-xl shadow-md w-full h-full">
       <h2 className="text-xl font-semibold text-green-900 mb-4">
         Result Section
       </h2>

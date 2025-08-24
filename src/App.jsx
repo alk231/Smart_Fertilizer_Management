@@ -29,32 +29,33 @@ function App() {
       <NavBar toggleSideBar={() => setIsSideBarOpen(!isSideBarOpen)} />
 
       {/* Sidebar + Main Content Layout */}
-      <div className="flex pt-12 ">
-        {/* Sidebar */}
-        <div
-          className={`transition-all duration-300 ${
-            isSideBarOpen ? "w-[250px] pr-[120px]" : "w-0 overflow-hidden"
-          }`}
-        >
-          <Sidebar isOpen={isSideBarOpen} />
-        </div>
+      <div className="flex pt-12">
+        {/* Sidebar Overlay */}
+        {isSideBarOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-40 z-40"
+            onClick={() => setIsSideBarOpen(false)}
+          />
+        )}
 
-        {/* Main Content */}
-        <div className="overflow-x-hidden w-full min-h-screen ">
-          <Routes>
-            <Route path="/" element={<Home backendData={backendData} />} />
-            <Route
-              path="/sensors"
-              element={backendData && <SensorsPage sensorData={backendData} /> }
-            />
-            <Route
-              path="/history"
-              element={<HistoryPage />}
-            />
-          </Routes>
-        </div>
+        <Sidebar isOpen={isSideBarOpen} toggleSideBar={() => setIsSideBarOpen(!isSideBarOpen)} />
+
+      {/* Main Content */}
+      <div className="overflow-x-hidden w-full min-h-screen ">
+        <Routes>
+          <Route path="/" element={<Home backendData={backendData} />} />
+          <Route
+            path="/sensors"
+            element={backendData && <SensorsPage sensorData={backendData} />}
+          />
+          <Route
+            path="/history"
+            element={<HistoryPage />}
+          />
+        </Routes>
       </div>
-    </Router>
+    </div>
+    </Router >
   );
 }
 

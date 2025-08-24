@@ -1,16 +1,24 @@
 import React from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
-import Sidebar from './Sidebar';
 
-function NavBar({toggleSideBar}) {
-
+function NavBar({ toggleSideBar }) {
   return (
-    <div className=" bg-green-700 flex fixed top-0 left-0 w-full items-center p-3 z-50">
-      <div>
-        <MenuIcon className="text-white cursor-pointer" onClick={toggleSideBar} />
+    <div className="bg-green-700 flex fixed top-0 left-0 w-full items-center justify-between p-3 z-50">
+      {/* Left side: Logo */}
+      <div className="flex items-center">
+        <img
+          src="/logo.png"
+          alt="Logo"
+          className="h-12 w-14 object-contain"
+        />
       </div>
-      <div className="flex items-center justify-center text-white text-2xl">
-        
+
+      {/* Right side: Menu */}
+      <div className="flex items-center ">
+        <MenuIcon
+          className="text-white cursor-pointer "
+          onClick={toggleSideBar}
+        />
       </div>
     </div>
   );

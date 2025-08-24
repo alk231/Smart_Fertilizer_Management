@@ -5,7 +5,7 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 
 function SensorFeed({ temperature, soilMoisture,Humidity }) {
   return (
-    <div className="bg-[#e3e0cd] p-4 rounded-xl w-full max-w-[450px] shadow-md">
+    <div className="bg-[#e3e0cd] p-4 rounded-xl w-full h-full shadow-md">
       <h2 className="text-lg font-semibold text-green-900 mb-4">Sensor Feed</h2>
 
       {/* Temperature Box */}
